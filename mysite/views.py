@@ -50,7 +50,7 @@ def verify(request: HttpRequest) -> HttpResponse:
     return render(request, 'list.html', context=data)
 
 
-git def ya_verify(request: HttpRequest) -> HttpResponse:
+def ya_verify(request: HttpRequest) -> HttpResponse:
     """
         Функция страницы, на которую перенаправляет Яндекс-служба после регистрации
         нового пользователя данного приложения. В данном случае достаточно CLIENT_ID
