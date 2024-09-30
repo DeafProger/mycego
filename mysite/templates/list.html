@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>mycego</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+{% block content %}
+<body>
+    {% for t in name %}
+        {% if  t.1 == '(folder)' %}
+            {{ t.0 }}, {{ t.1 }} <br>
+        {% else %}
+            {{ t.0 }}, {{ t.1 }} bytes, <a href="{{ t.2 }}" class="btn btn-light btn-sm" role="button">скачать</a> <br>
+        {% endif %}
+    {% endfor %}
+</body>
+{% endblock %}
+</html>
